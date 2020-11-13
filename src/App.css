@@ -1,7 +1,7 @@
 .optionBar {
   align-items: center;
   display: flex;
-  flex: 1;  
+  flex: 1;
   justify-content: space-between;
   padding: 3.5% 7.5% 0 0%;
 }
@@ -23,7 +23,7 @@
 .optBottomLeftSection {
   align-items: center;
   background: rgb(55, 55, 55);
-  background: linear-gradient(90deg, rgba(55, 55, 55, 1) 0%, rgba(12,12,12,1) 100%);
+  background: linear-gradient(90deg, rgba(55, 55, 55, 1) 0%, rgba(12, 12, 12, 1) 100%);
   display: flex;
   flex: 1;
   height: 5ch;
@@ -31,9 +31,8 @@
   padding-left: 7.5%;
   margin-right: 10ch;
   min-width: 65%;
-  opacity: 0.4;  
+  opacity: 0.4;
 }
-
 
 .optTopRightSection {
   align-items: center;
@@ -63,7 +62,7 @@
   color: #db274b;
 }
 
-.navBtnSelected { 
+.navBtnSelected {
   border-width: 0;
   background-color: transparent;
   color: #db274b;
@@ -72,8 +71,8 @@
 }
 
 .topBar {
-  background: rgb(12,12,12);
-  background: linear-gradient(90deg, rgba(12,12,12,1) 60%, rgba(40,40,40,1) 70%, rgba(224,224,224,1) 100%);
+  background: rgb(12, 12, 12);
+  background: linear-gradient(90deg, rgba(12, 12, 12, 1) 60%, rgba(40, 40, 40, 1) 70%, rgba(224, 224, 224, 1) 100%);
   height: 0.2ch;
   margin-top: 1ch;
 }
@@ -100,12 +99,14 @@
   width: 5ch;
 }
 
-.contactBtnText {  
+.contactBtnText {
   color: #e0e0e0;
   font-size: 2ch;
   padding: 3ch 0 0 3ch;
   height: 5ch;
 }
+
+/* home section */
 
 .homeBackground {
   background-image: url('./img/bg.jpg');
@@ -127,11 +128,10 @@
 
 .bigName {
   font-size: 5ch;
-  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation: nameAnimation 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-@-webkit-keyframes tracking-in-contract {
+@keyframes nameAnimation {
   0% {
     letter-spacing: 1em;
     opacity: 0;
@@ -144,20 +144,6 @@
     opacity: 1;
   }
 }
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-
 
 .accent {
   color: #db274b;
@@ -180,6 +166,8 @@
   font-size: 2ch;
 }
 
+/* achievement section */
+
 .timelineWord {
   align-items: flex-end;
   display: flex;
@@ -191,21 +179,12 @@
 
 .timelineBar {
   height: 1ch;
-  background: rgb(12,12,12);
-  background: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(66,19,28,1) 13%, rgba(219,39,75,1) 100%);
-  -webkit-animation: slide-in-fwd-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-in-fwd-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  background: rgb(12, 12, 12);
+  background: linear-gradient(90deg, rgba(12, 12, 12, 1) 0%, rgba(66, 19, 28, 1) 13%, rgba(219, 39, 75, 1) 100%);
+  animation: timelineAnimation 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@-webkit-keyframes slide-in-fwd-left {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100vw;
-  }
-}
-@keyframes slide-in-fwd-left {
+@keyframes timelineAnimation {
   0% {
     width: 0;
   }
@@ -241,4 +220,61 @@
 
 .timelineText {
   text-align: justify;
+}
+
+/* project section */
+
+.carousel {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2ch 0 0 0;
+}
+
+.carouselMid {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  min-height: 70vh;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.carouselBtn {
+  background-color: #1c1c1c;
+  border-width: 0;
+  height: 70ch;
+  outline: none;
+  padding: 0 3ch 0 3ch;
+}
+
+.carouselContent {
+  display: flex;
+  flex: 1;
+  max-width: 80vw;
+  overflow: hidden;
+}
+
+.carouselItem {
+  background-color: #1c1c1c;
+  height: 70vh;
+}
+
+.carouselDisplay {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 2ch 0 0 0;
+  width: 100vw;
+}
+
+.carouselIndicator {
+  background-color: #e0e0e0;
+  height: 0.15ch;
+  width: 3ch;
+  margin-left: 0.2ch;
+  margin-right: 0.2ch;
 }
