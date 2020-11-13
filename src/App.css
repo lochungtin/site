@@ -240,21 +240,42 @@
   min-height: 70vh;
   justify-content: space-between;
   width: 100vw;
+  
 }
 
 .carouselBtn {
-  background-color: #1c1c1c;
+  background-color: transparent;
   border-width: 0;
   height: 70ch;
   outline: none;
-  padding: 0 3ch 0 3ch;
+  padding: 0 7ch 0 7ch;
+  opacity: 0.5;
 }
+
+.carouselBtn:hover {
+  opacity: 1;
+}
+
+.carouselBtnImg {
+  width: 3ch;
+}
+
 
 .carouselContent {
   display: flex;
   flex: 1;
   max-width: 80vw;
   overflow: hidden;
+  animation: carouselOpacity 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes carouselOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .carouselItem {

@@ -2,6 +2,8 @@ import React from 'react';
 
 import CarouselItem from '../components/CarouselItem';
 import data from '../data/projects';
+import L from '../img/carouselLR/left.png';
+import R from '../img/carouselLR/right.png';
 
 export default class Section extends React.Component {
 
@@ -53,12 +55,16 @@ export default class Section extends React.Component {
         return (
             <div className="carousel">
                 <div className="carouselMid">
-                    <button className="carouselBtn" onClick={() => this.scrollLeft(false)} >{"<"}</button>
+                    <button className="carouselBtn" onClick={() => this.scrollLeft(false)}>
+                        <img className="carouselBtnImg" src={L} alt="" />
+                    </button>
                     <div className="carouselContent">
                         <CarouselItem title={this.state.order[0].title} width={this.state.display0Width} />
                         <CarouselItem title={this.state.order[1].title} width={this.state.display1Width} />
                     </div>
-                    <button className="carouselBtn" onClick={() => this.scrollRight(false)} >{">"}</button>
+                    <button className="carouselBtn" onClick={() => this.scrollRight(false)}>
+                        <img className="carouselBtnImg" src={R} alt="" />
+                    </button>
                 </div>
                 <div className="carouselDisplay">
                     {data.map(item => {
