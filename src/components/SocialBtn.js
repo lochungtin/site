@@ -4,19 +4,25 @@ import '../App.css';
 
 export default class Button extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            extend: false
+            extend: false,
+            storage: props.text,
+            style: {},
+            text: props.text,
         }
     }
 
     action = e => {
         e.preventDefault();
-        if (this.props.redirect !== undefined) 
+        if (this.props.redirect !== undefined)
             window.location.href = this.props.redirect;
-        else
+        else {
             navigator.clipboard.writeText(this.props.copy);
+            this.setState({ text: 'Copied', style: { color: '#555' } });
+            setTimeout(() => this.setState({ text: this.state.storage, style: {} }), 1000);
+        }
     }
 
     render() {
@@ -29,7 +35,7 @@ export default class Button extends React.Component {
             >
                 <div className="contactBtnContent">
                     <img className="contactIcon" src={this.props.src} alt="" />
-                    {this.state.extend && <p className="contactBtnText">{this.props.text}</p>}
+                    {this.state.extend && <p className="contactBtnText" style={this.state.style}>{this.state.text}</p>}
                 </div>
             </button>
         )
