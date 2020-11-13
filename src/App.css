@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.optionBar {
   align-items: center;
+  display: flex;
+  flex: 1;  
+  justify-content: space-between;
+  padding: 3.5% 7.5% 0 0%;
+}
+
+.icon {
+  width: 3.5ch;
+  margin-right: 5ch;
+}
+
+.optTopLeftSection {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: right;
+  padding-left: 7.5%;
+  min-width: 65%;
+}
+
+.optBottomLeftSection {
+  align-items: center;
+  background: rgb(55, 55, 55);
+  background: linear-gradient(90deg, rgba(55, 55, 55, 1) 0%, rgba(12,12,12,1) 100%);
+  display: flex;
+  flex: 1;
+  height: 5ch;
+  justify-content: right;
+  padding-left: 7.5%;
+  margin-right: 10ch;
+  min-width: 65%;
+  opacity: 0.4;  
+}
+
+
+.optTopRightSection {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  min-width: 32%;
+}
+
+.optBottomRightSection {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  min-width: 25%;
+}
+
+.navBtn {
+  border-width: 0;
+  background-color: transparent;
+  color: #e0e0e0;
+  font-size: 2ch;
+  outline: none;
+}
+
+.navBtn:hover {
+  color: #db274b;
+}
+
+.navBtnSelected { 
+  border-width: 0;
+  background-color: transparent;
+  color: #db274b;
+  font-size: 2ch;
+  outline: none;
+}
+
+.topBar {
+  background: rgb(12,12,12);
+  background: linear-gradient(90deg, rgba(12,12,12,1) 60%, rgba(40,40,40,1) 70%, rgba(224,224,224,1) 100%);
+  height: 0.2ch;
+  margin-top: 1ch;
+}
+
+.content {
+  height: 70vh;
+}
+
+.contactBtn {
+  background-color: transparent;
+  border-width: 0;
+  outline: none;
+}
+
+.contactBtnContent {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 5ch;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contactIcon {
+  width: 5ch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contactBtnText {  
+  color: #e0e0e0;
+  font-size: 2ch;
+  padding: 3ch 0 0 3ch;
+  height: 5ch;
+}
+
+.homeBackground {
+  background-image: url('./img/bg.jpg');
+  background-size: 80vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #020202;
+  height: 75vh;
+}
+
+.homeContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15% 20% 0 20%;
+}
+
+.bigName {
+  font-size: 5ch;
+  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    opacity: 0.6;
   }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+
+.accent {
+  color: #db274b;
+}
+
+.smolName {
+  font-size: 3ch;
+}
+
+.subtextContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-top: 5ch;
+  width: 50%;
+}
+
+.subtext {
+  font-size: 2ch;
+}
+
+.timelineWord {
+  align-items: flex-end;
+  display: flex;
+  flex: 1;
+  height: 7ch;
+  padding: 0 0 1ch 10ch;
+  font-size: 4ch;
+}
+
+.timelineBar {
+  height: 1ch;
+  background: rgb(12,12,12);
+  background: linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(66,19,28,1) 13%, rgba(219,39,75,1) 100%);
+}
+
+.timelineCol {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.timelineItem {
+  width: 30ch;
+}
+
+.timelineLine {
+  font-size: 5ch;
+}
+
+.timelineTitleBox {
+  height: 6ch;
+  margin-top: 0.5ch;
+  margin-bottom: 2ch;
+}
+
+.timelineTitle {
+  font-size: 2ch;
+}
+
+.timelineText {
+  text-align: justify;
 }
