@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="root">
                 <div className="optionBar">
                     <div className="optTopLeftSection">
                         <img className="icon" src={logo} alt="" />

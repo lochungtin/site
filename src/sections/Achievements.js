@@ -8,7 +8,7 @@ export default class Section extends React.Component {
     render() {
         return (
             <div className="contactContainer">
-                <p className="timelineWord">TIMELINE</p>
+                <p className="timelineWord">Timeline</p>
                 <div className="timelineBar" />
                 <div className="timelineCol">
                     {data.map(item => {

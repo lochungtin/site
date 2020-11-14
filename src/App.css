@@ -1,14 +1,20 @@
+.root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .optionBar {
   align-items: center;
   display: flex;
   flex: 1;
   justify-content: space-between;
-  padding: 3.5% 7.5% 0 0%;
+  padding: 5ch 0 0 0;
 }
 
 .icon {
   width: 3.5ch;
-  margin-right: 5ch;
+  margin: 0 5ch 0 5ch; 
 }
 
 .optTopLeftSection {
@@ -16,38 +22,14 @@
   display: flex;
   flex: 1;
   justify-content: right;
-  padding-left: 7.5%;
-  min-width: 65%;
-}
-
-.optBottomLeftSection {
-  align-items: center;
-  background: rgb(55, 55, 55);
-  background: linear-gradient(90deg, rgba(55, 55, 55, 1) 0%, rgba(12, 12, 12, 1) 100%);
-  display: flex;
-  flex: 1;
-  height: 5ch;
-  justify-content: right;
-  padding-left: 7.5%;
-  margin-right: 10ch;
-  min-width: 65%;
-  opacity: 0.4;
+  padding: 0 0 0 7ch;
 }
 
 .optTopRightSection {
   align-items: center;
   display: flex;
   flex: 1;
-  justify-content: space-between;
-  min-width: 32%;
-}
-
-.optBottomRightSection {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-  min-width: 25%;
+  justify-content: space-around;
 }
 
 .navBtn {
@@ -56,6 +38,8 @@
   color: #e0e0e0;
   font-size: 2ch;
   outline: none;
+  padding: 0 1ch 0 1ch;
+  white-space: nowrap;
 }
 
 .navBtn:hover {
@@ -68,17 +52,41 @@
   color: #db274b;
   font-size: 2ch;
   outline: none;
+  padding: 0 1ch 0 1ch;
+  white-space: nowrap;
 }
 
 .topBar {
   background: rgb(12, 12, 12);
-  background: linear-gradient(90deg, rgba(12, 12, 12, 1) 60%, rgba(40, 40, 40, 1) 70%, rgba(224, 224, 224, 1) 100%);
+  background: linear-gradient(90deg, rgba(12, 12, 12, 1) 40%, rgba(40, 40, 40, 1) 60%, rgba(224, 224, 224, 1) 100%);
   height: 0.2ch;
   margin-top: 1ch;
 }
 
 .content {
   height: 70vh;
+  overflow: scroll;
+}
+
+.optBottomLeftSection {
+  align-items: center;
+  background: rgb(55, 55, 55);
+  background: linear-gradient(90deg, rgba(55, 55, 55, 1) 0%, rgba(12, 12, 12, 1) 100%);
+  display: flex;
+  flex: 1;
+  height: 5ch;
+  justify-content: right;
+  margin-right: 10ch;
+  opacity: 0.4;
+}
+
+.optBottomRightSection {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-right: 10ch;
+  max-width: 25%;
 }
 
 .contactBtn {
@@ -102,7 +110,7 @@
 .contactBtnText {
   color: #e0e0e0;
   font-size: 2ch;
-  padding: 3ch 0 0 3ch;
+  padding: 3ch 1.5ch 0 1.5ch;
   height: 5ch;
 }
 
@@ -128,6 +136,7 @@
 
 .bigName {
   font-size: 5ch;
+  white-space: nowrap;
   animation: nameAnimation 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
@@ -151,6 +160,7 @@
 
 .smolName {
   font-size: 3ch;
+  white-space: nowrap;
 }
 
 .subtextContainer {
@@ -159,11 +169,13 @@
   flex: 1;
   justify-content: space-between;
   padding-top: 5ch;
+  white-space: nowrap;
   width: 50%;
 }
 
 .subtext {
   font-size: 2ch;
+  white-space: nowrap;
 }
 
 /* achievement section */
@@ -331,7 +343,7 @@
 }
 
 .skillTitle {
-  font-size: 2.5ch;
+  font-size: 4ch;
 }
 
 .skillLabelContainer {
@@ -359,4 +371,45 @@
 .skillText {
   font-size: 2ch;
   padding: 0 0 0.5ch 2ch;
+}
+
+/* about section */
+
+.aboutContainer {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  height: 70vh;
+  padding-top: 20vh;
+  justify-content: space-evenly;
+}
+
+.aboutSection {
+  width: 40vw;
+}
+
+.aboutSectionTitle {
+  color: #db274b;
+  font-size: 3ch;
+  height: 3ch;
+  animation: aboutTitleAnimation 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@keyframes aboutTitleAnimation {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.aboutSectionPara {
+  padding: 1ch 0 1ch 0;
+  text-align: justify;
 }
