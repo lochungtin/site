@@ -299,3 +299,64 @@
   margin-left: 0.2ch;
   margin-right: 0.2ch;
 }
+
+/* skills section */
+
+.skillContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.skillGraph {
+  height: 55vh;
+  animation: skillOpacity 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes skillOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skillContext {
+  margin: 0 0 7ch 0;
+  text-align: justify;
+  width: 20vw;
+}
+
+.skillTitle {
+  font-size: 2.5ch;
+}
+
+.skillLabelContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.skillLabel {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 10ch;
+}
+
+.skillDot {
+  border-radius: 2ch;
+  min-height: 2ch;
+  min-width: 2ch;
+}
+
+.skillText {
+  font-size: 2ch;
+  padding: 0 0 0.5ch 2ch;
+}
