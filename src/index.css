@@ -14,6 +14,11 @@ html, body {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 /* custom fonts */
 
 @font-face {
