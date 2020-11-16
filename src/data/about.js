@@ -1,5 +1,5 @@
 export const section1 = {
-    "title": "A Glimpse into the lad",
+    "title": "About Me",
     "content": [
         "I am a second-year university student studying BSc Computer Science at King's College London.",
         "Creating innovative solutions and products was always a hobby of mine. At a young age, I was introduced to programming, which I got hooked on almost instantly. Being able to use microcontrollers to drive different hardware devices opened an entire dimension of opportunities that presents with bigger and better projects. With the fair amount of experience I gathered from my past projects throughout the years, I would say I can build a pretty decent robot that serves its function.",

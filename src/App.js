@@ -25,7 +25,23 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             display: 'home',
+            height: 0,
+            width: 0,
         }
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     navBtn = name => {
@@ -65,7 +81,7 @@ export default class App extends React.Component {
                 <div className='topBar' />
                 <div className="content">
                     {this.state.display === 'home' && <Home />}
-                    {this.state.display === 'about' && <About />}
+                    {this.state.display === 'about' && <About mobile={this.state.height > this.state.width} />}
                     {this.state.display === 'skills' && <Skills />}
                     {this.state.display === 'achievements' && <Achievements />}
                     {this.state.display === 'projects' && <Projects />}
@@ -74,11 +90,11 @@ export default class App extends React.Component {
                 <div className="optionBar">
                     <div className="optBottomLeftSection" />
                     <div className="optBottomRightSection">
-                        <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'}/>
-                        <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'}/>
-                        <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'}/>
-                        <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'}/>
-                        <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'}/>
+                        <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} />
+                        <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} />
+                        <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'} />
+                        <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} />
+                        <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} />
                     </div>
                 </div>
             </div>

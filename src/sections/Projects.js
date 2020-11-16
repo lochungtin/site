@@ -59,8 +59,8 @@ export default class Section extends React.Component {
                         <img className="carouselBtnImg" src={L} alt="" />
                     </button>
                     <div className="carouselContent">
-                        <CarouselItem title={this.state.order[0].title} width={this.state.display0Width} />
-                        <CarouselItem title={this.state.order[1].title} width={this.state.display1Width} />
+                        {this.state.display0Width > 10 && <CarouselItem item={this.state.order[0]} width={this.state.display0Width} opacity={this.state.display0Width / 90}/>}
+                        {this.state.display1Width > 10 && <CarouselItem item={this.state.order[1]} width={this.state.display1Width} opacity={this.state.display1Width / 90}/>}
                     </div>
                     <button className="carouselBtn" onClick={() => this.scrollRight(false)}>
                         <img className="carouselBtnImg" src={R} alt="" />
