@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 
 import SocialBtn from './components/SocialBtn';
+import MobileExt from './components/MobileExtension';
 
 import logo from './img/logo/logo.ico';
 import FB from './img/socials/facebook.png';
@@ -92,11 +93,11 @@ export default class App extends React.Component {
                         <div className="optionBar">
                             <div className="optBottomLeftSection" />
                             <div className="optBottomRightSection">
-                                <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} />
-                                <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} />
-                                <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'} />
-                                <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} />
-                                <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} />
+                                <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} desktop={true} />
+                                <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} desktop={true} />
+                                <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'} desktop={true} />
+                                <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} desktop={true} />
+                                <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} desktop={true} />
                             </div>
                         </div>
                     </div>
@@ -104,11 +105,20 @@ export default class App extends React.Component {
                     <div>
                         <Home desktop={false} />
                         <About desktop={false} />
+                        <MobileExt section="Skills">
+                            <Skills desktop={false} />
+                        </MobileExt>
+                        <MobileExt section="Achievements">
+                            <Achievements desktop={false} />
+                        </MobileExt>
+                        <MobileExt section="Project">
+                            <Projects desktop={false} />
+                        </MobileExt>
                         <div className="socialButtons">
-                            <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} desktop={false}/>
-                            <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} desktop={false}/>
-                            <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} desktop={false}/>
-                            <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} desktop={false}/>
+                            <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} desktop={false} />
+                            <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} desktop={false} />
+                            <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} desktop={false} />
+                            <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} desktop={false} />
                         </div>
                     </div>
                 }
