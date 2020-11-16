@@ -52,52 +52,61 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="root">
-                <div className="optionBar">
-                    <div className="optTopLeftSection">
-                        <img className="icon" src={logo} alt="" />
-                        <button className={this.navBtn('home')} onClick={() => this.setState({ display: 'home' })}>
-                            Home
+            <>
+                {this.state.width > this.state.height ?
+                    <div className="root">
+                        <div className="optionBar">
+                            <div className="optTopLeftSection">
+                                <img className="icon" src={logo} alt="" />
+                                <button className={this.navBtn('home')} onClick={() => this.setState({ display: 'home' })}>
+                                    Home
                         </button>
+                            </div>
+                            <div className="optTopRightSection">
+                                <button className={this.navBtn('about')} onClick={() => this.setState({ display: 'about' })}>
+                                    About Me
+                        </button>
+                                <button className={this.navBtn('skills')} onClick={() => this.setState({ display: 'skills' })}>
+                                    Skills
+                        </button>
+                                <button className={this.navBtn('achievements')} onClick={() => this.setState({ display: 'achievements' })}>
+                                    Achievements
+                        </button>
+                                <button className={this.navBtn('projects')} onClick={() => this.setState({ display: 'projects' })}>
+                                    Projects
+                        </button>
+                                <button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
+                                    Resume
+                        </button>
+                            </div>
+                        </div>
+                        <div className='topBar' />
+                        <div className="content">
+                            {this.state.display === 'home' && <Home desktop={true} />}
+                            {this.state.display === 'about' && <About desktop={true} />}
+                            {this.state.display === 'skills' && <Skills desktop={true} />}
+                            {this.state.display === 'achievements' && <Achievements desktop={true} />}
+                            {this.state.display === 'projects' && <Projects desktop={true} />}
+                            {this.state.display === 'resume' && <Resume desktop={true} />}
+                        </div>
+                        <div className="optionBar">
+                            <div className="optBottomLeftSection" />
+                            <div className="optBottomRightSection">
+                                <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} />
+                                <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} />
+                                <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'} />
+                                <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} />
+                                <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} />
+                            </div>
+                        </div>
                     </div>
-                    <div className="optTopRightSection">
-                        <button className={this.navBtn('about')} onClick={() => this.setState({ display: 'about' })}>
-                            About Me
-                        </button>
-                        <button className={this.navBtn('skills')} onClick={() => this.setState({ display: 'skills' })}>
-                            Skills
-                        </button>
-                        <button className={this.navBtn('achievements')} onClick={() => this.setState({ display: 'achievements' })}>
-                            Achievements
-                        </button>
-                        <button className={this.navBtn('projects')} onClick={() => this.setState({ display: 'projects' })}>
-                            Projects
-                        </button>
-                        <button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
-                            Resume
-                        </button>
+                    :
+                    <div className="root-m">
+                        <Home desktop={false} />
+                        <About desktop={false} />
                     </div>
-                </div>
-                <div className='topBar' />
-                <div className="content">
-                    {this.state.display === 'home' && <Home />}
-                    {this.state.display === 'about' && <About mobile={this.state.height > this.state.width} />}
-                    {this.state.display === 'skills' && <Skills />}
-                    {this.state.display === 'achievements' && <Achievements />}
-                    {this.state.display === 'projects' && <Projects />}
-                    {this.state.display === 'resume' && <Resume />}
-                </div>
-                <div className="optionBar">
-                    <div className="optBottomLeftSection" />
-                    <div className="optBottomRightSection">
-                        <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} />
-                        <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} />
-                        <SocialBtn src={GM} text={'Gmail'} copy={'lochungtin@gmail.com'} />
-                        <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} />
-                        <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} />
-                    </div>
-                </div>
-            </div>
+                }
+            </>
         );
     }
 }

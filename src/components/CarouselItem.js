@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../App.css';
 import GH from '../img/socials/github.png';
 
 export default class CarouselItem extends React.Component {

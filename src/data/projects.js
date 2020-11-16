@@ -1,9 +1,12 @@
 import CC from '../img/projects/logo/cc.png';
 import DP from '../img/projects/logo/dp.jpg';
-import TL from '../img/projects/logo/logo.png';
+import TL from '../img/projects/logo/lg.png';
+import RF from '../img/projects/logo/rf.png';
 
 import CCPreview from '../img/projects/preview/cc.png';
-import UFPreview from '../img/projects/preview/uf.jpg';  
+import UFPreview from '../img/projects/preview/uf.jpg';
+import B2preview from '../img/projects/preview/b2.png';
+import RFpreview from '../img/projects/preview/rf.jpg';
 
 const data = [
     {
@@ -64,20 +67,33 @@ const data = [
         website: "",
         websiteLogo: "",
         github: "https://github.com/lochungtin/Big2-Server-Client-Game",
-        section1: [],
-        section2: [],
-        img: "",
+        section1: [
+            "Big2 (a.k.a deuces, capsa) is a card game originated from Hong Kong. This is a server-client application that models this game and allows users to play across computers. 2 users are allowed per server as this application is only designed for 2 players.",
+            "This Application uses java's socket server library to establish connections between the server and the client. ",
+        ],
+        section2: [
+            "The client sends and receives messages using a specially designed protocol to communicate with the server, notifying it which specific task should be invoked. The server will then respond to the sender or both clients that the process has been completed.",
+            "Both server and client use multithreading, which enables the server and client to handle different tasks simultaneously.",
+        ],
+        img: B2preview,
     },
     {
         id: 4,
         title: "Robofest 2017",
         slogan: "GRAF World Championship & People's Choice Award",
-        website: "",
-        websiteLogo: "",
+        website: "https://logossteampowered.wixsite.com/2017robofest/about-us",
+        websiteLogo: RF,
         github: "",
-        section1: [],
-        section2: [],
-        img: "",
+        section1: [
+            "Robofest is Lawrence Technological University’s world-wide autonomous robotics program for 4th grade – 12th grade and college students. Student teams design, construct, and program their robots to compete for trophies in a variety of competitions.", 
+            "Two fellow classmates and I formed a team and participated in the “Global Robotics Arts Festival” in 2017. We finished as champions in the event.",
+            
+        ],
+        section2: [
+            "For this event, my team and I built 3 different digital instruments. A digital violin, named the Modulin. For it operates with two processing units, therefore, modular. Following the theme, we named our digital Gu Zheng (chinese zither) the ModuZheng, and our digital midi drum the ModuDrum.",
+            "For more information, please visit the official website of our team - SteamPowered.",
+        ],
+        img: RFpreview,
     },
     {
         id: 5,

@@ -34,14 +34,14 @@ export default class Section extends React.Component {
     slideLeft = num => {
         if (num >= 0) {
             this.setState({ display0Width: 90 - num, display1Width: num });
-            setTimeout(() => this.slideLeft(num - 2), 1);
+            setTimeout(() => this.slideLeft(num - 1), 1);
         }
     }
 
     slideRight = num => {
         if (num >= 0) {
             this.setState({ display0Width: num, display1Width: 90 - num });
-            setTimeout(() => this.slideRight(num - 2), 1);
+            setTimeout(() => this.slideRight(num - 1), 1);
         }
     }
 
