@@ -521,7 +521,7 @@
 
 .homeContainer-m {
   align-items: center;
-  border-bottom: 0.1vw solid #e0e0e0;
+  border-bottom: 0.1vh solid #e0e0e0;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -572,4 +572,27 @@
   font-size: 4vw;
   padding: 1ch 0 1ch 0;
   text-align: justify;
+}
+
+/* social buttons */
+
+.socialButtons {
+  align-items: center;
+  border-top: 0.1vh solid #e0e0e0;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  padding: 7vh;
+}
+
+.contactBtnContent-m {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 10vw;
+  justify-content: center;
+}
+
+.contactIcon-m {
+  width: 10vw;
 }

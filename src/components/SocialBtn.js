@@ -25,6 +25,10 @@ export default class Button extends React.Component {
         }
     }
 
+    style = name => {
+        return this.props.desktop ? name : name + "-m";
+    }
+
     render() {
         return (
             <button
@@ -33,9 +37,9 @@ export default class Button extends React.Component {
                 onMouseEnter={() => this.setState({ extend: true })}
                 onMouseLeave={() => this.setState({ extend: false })}
             >
-                <div className="contactBtnContent">
-                    <img className="contactIcon" src={this.props.src} alt="" />
-                    {this.state.extend && <p className="contactBtnText" style={this.state.style}>{this.state.text}</p>}
+                <div className={this.style("contactBtnContent")}>
+                    <img className={this.style("contactIcon")} src={this.props.src} alt="" />
+                    {this.state.extend && this.props.desktop && <p className="contactBtnText" style={this.state.style}>{this.state.text}</p>}
                 </div>
             </button>
         )

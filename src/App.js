@@ -101,9 +101,15 @@ export default class App extends React.Component {
                         </div>
                     </div>
                     :
-                    <div className="root-m">
+                    <div>
                         <Home desktop={false} />
                         <About desktop={false} />
+                        <div className="socialButtons">
+                            <SocialBtn src={FB} text={'Facebook'} redirect={'https://www.facebook.com/timothylo.hk/'} desktop={false}/>
+                            <SocialBtn src={IG} text={'Instagram'} redirect={'https://www.instagram.com/lochungtin/'} desktop={false}/>
+                            <SocialBtn src={LN} text={'LinkedIn'} redirect={'https://www.linkedin.com/in/timothy-lo-chung-tin/'} desktop={false}/>
+                            <SocialBtn src={GH} text={'Github'} redirect={'https://www.github.com/lochungtin/'} desktop={false}/>
+                        </div>
                     </div>
                 }
             </>
