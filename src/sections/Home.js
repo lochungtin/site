@@ -1,5 +1,7 @@
 import React from 'react';
 
+import propic from '../img/propic.jpg';
+
 export default class Section extends React.Component {
 
     render() {
@@ -7,7 +9,7 @@ export default class Section extends React.Component {
             <>
                 {this.props.desktop ?
                     <div className="homeContainer">
-                        <div>
+                        <div className="homeTextContainer">
                             <span className="bigName">LO<span className="accent"> TIMOTHY </span></span>
                             <span className="smolName">CHUNG TIN</span>
                         </div>
@@ -18,7 +20,8 @@ export default class Section extends React.Component {
                         </div>
                     </div> :
                     <div className="homeContainer-m">
-                        <div>
+                        <img src={propic} className="propic" alt="" />
+                        <div className="nameContainer-m">
                             <span className="bigName-m">LO<span className="accent"> TIMOTHY </span></span>
                             <span className="smolName-m">CHUNG TIN</span>
                         </div>

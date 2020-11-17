@@ -111,17 +111,6 @@ const data = [
         ],
         img: "",
     },
-    {
-        id: 6,
-        title: "Future Proton Native Project",
-        slogan: "Coming Soon",
-        website: "",
-        websiteLogo: "",
-        github: "",
-        section1: [],
-        section2: [],
-        img: "",
-    },
 ];
 
 export default data;

@@ -10,7 +10,6 @@ export default class Section extends React.Component {
 
     render() {
         return (
-
             <div className={this.style("aboutContainer")}>
                 <div className={this.style("aboutSection")}>
                     <p className={this.style("aboutSectionTitle")}>{section1.title}</p>

@@ -5,6 +5,7 @@ import './App.css';
 import SocialBtn from './components/SocialBtn';
 import MobileExt from './components/MobileExtension';
 
+import pic from './img/pic.jpg';
 import logo from './img/logo/logo.ico';
 import FB from './img/socials/facebook.png';
 import GH from './img/socials/github.png';
@@ -61,24 +62,24 @@ export default class App extends React.Component {
                                 <img className="icon" src={logo} alt="" />
                                 <button className={this.navBtn('home')} onClick={() => this.setState({ display: 'home' })}>
                                     Home
-                        </button>
+                                </button>
                             </div>
                             <div className="optTopRightSection">
                                 <button className={this.navBtn('about')} onClick={() => this.setState({ display: 'about' })}>
                                     About Me
-                        </button>
+                                </button>
                                 <button className={this.navBtn('skills')} onClick={() => this.setState({ display: 'skills' })}>
                                     Skills
-                        </button>
+                                </button>
                                 <button className={this.navBtn('achievements')} onClick={() => this.setState({ display: 'achievements' })}>
                                     Achievements
-                        </button>
+                                </button>
                                 <button className={this.navBtn('projects')} onClick={() => this.setState({ display: 'projects' })}>
                                     Projects
-                        </button>
+                                </button>
                                 <button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
                                     Resume
-                        </button>
+                                </button>
                             </div>
                         </div>
                         <div className='topBar' />
@@ -111,7 +112,7 @@ export default class App extends React.Component {
                         <MobileExt section="Achievements">
                             <Achievements desktop={false} />
                         </MobileExt>
-                        <MobileExt section="Project">
+                        <MobileExt section="Projects">
                             <Projects desktop={false} />
                         </MobileExt>
                         <div className="socialButtons">

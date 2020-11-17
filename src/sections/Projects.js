@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CarouselItem from '../components/CarouselItem';
+import ProjectItemMobile from '../components/ProjectItemMobile';
 import data from '../data/projects';
 import L from '../img/carouselLR/left.png';
 import R from '../img/carouselLR/right.png';
@@ -53,27 +54,39 @@ export default class Section extends React.Component {
 
     render() {
         return (
-            <div className="carousel">
-                <div className="carouselMid">
-                    <button className="carouselBtn" onClick={() => this.scrollLeft(false)}>
-                        <img className="carouselBtnImg" src={L} alt="" />
-                    </button>
-                    <div className="carouselContent">
-                        {this.state.display0Width > 10 && <CarouselItem item={this.state.order[0]} width={this.state.display0Width} opacity={this.state.display0Width / 90}/>}
-                        {this.state.display1Width > 10 && <CarouselItem item={this.state.order[1]} width={this.state.display1Width} opacity={this.state.display1Width / 90}/>}
+            <>
+                {this.props.desktop ?
+                    <div className="carousel">
+                        <div className="carouselMid">
+                            <button className="carouselBtn" onClick={() => this.scrollLeft(false)}>
+                                <img className="carouselBtnImg" src={L} alt="" />
+                            </button>
+                            <div className="carouselContent">
+                                {this.state.display0Width > 10 && <CarouselItem item={this.state.order[0]} width={this.state.display0Width} opacity={this.state.display0Width / 90} />}
+                                {this.state.display1Width > 10 && <CarouselItem item={this.state.order[1]} width={this.state.display1Width} opacity={this.state.display1Width / 90} />}
+                            </div>
+                            <button className="carouselBtn" onClick={() => this.scrollRight(false)}>
+                                <img className="carouselBtnImg" src={R} alt="" />
+                            </button>
+                        </div>
+                        <div className="carouselDisplay">
+                            {data.map(item => {
+                                return (
+                                    <div className="carouselIndicator" style={this.focusStyle(item.id)} />
+                                )
+                            })}
+                        </div>
                     </div>
-                    <button className="carouselBtn" onClick={() => this.scrollRight(false)}>
-                        <img className="carouselBtnImg" src={R} alt="" />
-                    </button>
-                </div>
-                <div className="carouselDisplay">
-                    {data.map(item => {
-                        return (
-                            <div className="carouselIndicator" style={this.focusStyle(item.id)} />
-                        )
-                    })}
-                </div>
-            </div>
+                    :
+                    <div>
+                        {data.map(item => {
+                            return (
+                                <ProjectItemMobile item={item} />
+                            )
+                        })}
+                    </div>
+                }
+            </>
         );
     }
 }
