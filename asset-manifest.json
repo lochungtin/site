@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/site/static/css/main.e635c900.chunk.css",
-    "main.js": "/site/static/js/main.96f81e46.chunk.js",
-    "main.js.map": "/site/static/js/main.96f81e46.chunk.js.map",
+    "main.js": "/site/static/js/main.d919ea32.chunk.js",
+    "main.js.map": "/site/static/js/main.d919ea32.chunk.js.map",
     "runtime-main.js": "/site/static/js/runtime-main.58ffb6ee.js",
     "runtime-main.js.map": "/site/static/js/runtime-main.58ffb6ee.js.map",
     "static/js/2.e36cc16e.chunk.js": "/site/static/js/2.e36cc16e.chunk.js",
@@ -21,7 +21,7 @@
     "static/media/instagram.7cb2163b.png": "/site/static/media/instagram.7cb2163b.png",
     "static/media/logo.922c3356.ico": "/site/static/media/logo.922c3356.ico",
     "static/media/App.css": "/site/static/media/pic.a20c76db.jpg",
-    "static/media/propic.607a29d6.jpg": "/site/static/media/propic.607a29d6.jpg",
+    "static/media/propic.e8a825b5.jpg": "/site/static/media/propic.e8a825b5.jpg",
     "static/media/rf.64fb952e.png": "/site/static/media/rf.64fb952e.png",
     "static/media/rf.e49bc950.jpg": "/site/static/media/rf.e49bc950.jpg",
     "static/media/skill-graph.2e4474f7.png": "/site/static/media/skill-graph.2e4474f7.png",
@@ -33,6 +33,6 @@
     "static/js/runtime-main.58ffb6ee.js",
     "static/js/2.e36cc16e.chunk.js",
     "static/css/main.e635c900.chunk.css",
-    "static/js/main.96f81e46.chunk.js"
+    "static/js/main.d919ea32.chunk.js"
   ]
 }
