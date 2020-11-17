@@ -105,7 +105,9 @@ export default class App extends React.Component {
                     :
                     <div>
                         <Home desktop={false} />
-                        <About desktop={false} />
+                        <MobileExt section="About Me">
+                            <About desktop={false} />
+                        </MobileExt>
                         <MobileExt section="Skills">
                             <Skills desktop={false} />
                         </MobileExt>
