@@ -77,9 +77,9 @@ export default class App extends React.Component {
                                 <button className={this.navBtn('projects')} onClick={() => this.setState({ display: 'projects' })}>
                                     Projects
                                 </button>
-                                <button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
+                                {/*<button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
                                     Resume
-                                </button>
+                                </button>*/}
                             </div>
                         </div>
                         <div className='topBar' />
