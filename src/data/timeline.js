@@ -8,7 +8,7 @@ const data = [
     {
         "year": "2017",
         "title": "Robofest GRAF World Championship",
-        "text": "Won World Championship and the People's Choice Award in Robofest 2017 - Global Robotics Art Festival.",
+        "text": "Awarded World Championship and the People's Choice Award in Robofest 2017 - Global Robotics Art Festival.",
         "count": "2",
     },
     {

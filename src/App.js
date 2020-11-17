@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './App.css';
+import './Mobile.css'
 
 import SocialBtn from './components/SocialBtn';
 import MobileExt from './components/MobileExtension';
 
-import pic from './img/pic.jpg';
 import logo from './img/logo/logo.ico';
 import FB from './img/socials/facebook.png';
 import GH from './img/socials/github.png';
