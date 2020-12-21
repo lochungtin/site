@@ -48,8 +48,8 @@ export default class App extends React.Component {
 
     navBtn = name => {
         if (this.state.display === name)
-            return 'navBtnSelected';
-        return 'navBtn';
+            return 'navBtnSelected noselect';
+        return 'navBtn noselect';
     }
 
     rootStyle = () => {

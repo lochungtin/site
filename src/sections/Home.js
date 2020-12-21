@@ -10,13 +10,13 @@ export default class Section extends React.Component {
                 {this.props.desktop ?
                     <div className="homeContainer">
                         <div className="homeTextContainer">
-                            <span className="bigName">LO<span className="accent"> TIMOTHY </span></span>
-                            <span className="smolName">CHUNG TIN</span>
+                            <span className="bigName noselect">LO<span className="accent"> TIMOTHY </span></span>
+                            <span className="smolName noselect">CHUNG TIN</span>
                         </div>
                         <div className="subtextContainer">
-                            <span className="subtext">Current Student</span>
-                            <span className="subtext accent">{"</>"}</span>
-                            <span className="subtext">Rising Developer</span>
+                            <span className="subtext noselect">Current Student</span>
+                            <span className="subtext accent noselect">{"</>"}</span>
+                            <span className="subtext noselect">Rising Developer</span>
                         </div>
                     </div> :
                     <div className="homeContainer-m">
