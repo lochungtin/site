@@ -1,8 +1,19 @@
+.rootHome {
+  background-image: url('./img/pic.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .root {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 5ch;
+  height: 100vh;
 }
 
 .optionBar {
@@ -63,6 +74,12 @@
   margin-top: 1ch;
 }
 
+.topBarE {
+  background: transparent;
+  height: 0.2ch;
+  margin-top: 1ch;
+}
+
 .content {
   height: 80vh;
   overflow: scroll;
@@ -118,9 +135,6 @@
 
 .homeContainer {
   align-items: center;
-  background-image: url('./img/pic.jpg');
-  background-position: top right;
-  background-repeat: no-repeat;
   display: flex;
   flex: 1;
   flex-direction: column;

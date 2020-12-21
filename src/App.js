@@ -17,9 +17,9 @@ import About from './sections/About';
 import Achievements from './sections/Achievements';
 import Home from './sections/Home';
 import Projects from './sections/Projects';
-import Resume from './sections/Resume';
 import Skills from './sections/Skills';
 
+import pdf from './data/Resume_Timothy.pdf'
 
 export default class App extends React.Component {
 
@@ -52,11 +52,23 @@ export default class App extends React.Component {
         return 'navBtn';
     }
 
+    rootStyle = () => {
+        if (this.state.display === 'home')
+            return 'rootHome';
+        return 'root';
+    }
+
+    topbarStyle = () => {
+        if (this.state.display === 'home')
+            return 'topBarE';
+        return 'topBar';
+    }
+
     render() {
         return (
             <>
                 {this.state.width > this.state.height ?
-                    <div className="root">
+                    <div className={this.rootStyle()}>
                         <div className="optionBar">
                             <div className="optTopLeftSection">
                                 <img className="icon" src={logo} alt="" />
@@ -77,19 +89,20 @@ export default class App extends React.Component {
                                 <button className={this.navBtn('projects')} onClick={() => this.setState({ display: 'projects' })}>
                                     Projects
                                 </button>
-                                {/*<button className={this.navBtn('resume')} onClick={() => this.setState({ display: 'resume' })}>
-                                    Resume
-                                </button>*/}
+                                <a href={pdf} without rel="noopener noreferrer" target="_blank">
+                                    <button className={this.navBtn('resume')}>
+                                        Resume
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                        <div className='topBar' />
+                        <div className={this.topbarStyle()} />
                         <div className="content">
                             {this.state.display === 'home' && <Home desktop={true} />}
                             {this.state.display === 'about' && <About desktop={true} />}
                             {this.state.display === 'skills' && <Skills desktop={true} />}
                             {this.state.display === 'achievements' && <Achievements desktop={true} />}
                             {this.state.display === 'projects' && <Projects desktop={true} />}
-                            {this.state.display === 'resume' && <Resume desktop={true} />}
                         </div>
                         <div className="optionBar">
                             <div className="optBottomLeftSection" />
