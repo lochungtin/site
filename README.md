@@ -1,6 +1,6 @@
 ## Hey There!
 
-This is my <a href="http://lochungtin.github.io/site">personal website</a> built with react js
+This is my <a href="http://lochungtin.github.io/site">personal website</a> built with react js.
 
 ### What you can find on the site
 
