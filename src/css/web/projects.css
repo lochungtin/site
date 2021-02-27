@@ -6,12 +6,13 @@
 
 }
 
-.project-filter-category-container {
-    margin: 10ch,
+.project-filter-category-container {    
 }
 
 .project-filter-category {
-
+    font-weight: bold;
+    margin-top: 2ch;
+    margin-bottom: 2ch;
 }
 
 .project-filter-tag {
