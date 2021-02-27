@@ -1,19 +1,16 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
-import './App.css';
-import './Mobile.css'
+import { store } from './redux/store';
+import AppNav from './navigation';
 
 export default class App extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
-            <div>
-                
-            </div>
+            <Provider store={store}>
+                <AppNav />
+            </Provider>
         );
     }
 }

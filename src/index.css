@@ -1,50 +1,55 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  color: #e0e0e0;
-  background-color: #0c0c0c;
-  background-size: cover;
-  font-family: 'be_vietnamlight';
-  scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fcfcfc;
+    background-color: #0c0c0c;
+    background-size: cover;
+    font-family: 'be_vietnamlight';
+    scroll-behavior: smooth;
 }
 
 button {
-  font-family: 'be_vietnamlight';
+    font-family: 'be_vietnamlight';
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
+.row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
 }
 
 /* custom fonts */
 
 @font-face {
-  font-family: 'timeburnerregular';
-  src: url('fonts/timeburner_regular-webfont.woff2') format('woff2'), url('fonts/timeburner_regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'be_vietnamlight';
-  src: url('fonts/bevietnam-light-webfont.woff2') format('woff2'), url('fonts/bevietnam-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'be_vietnamlight';
+    src: url('fonts/bevietnam-light-webfont.woff2') format('woff2'), url('fonts/bevietnam-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
