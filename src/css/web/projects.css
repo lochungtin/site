@@ -44,7 +44,21 @@
 }
 
 .project-filter-tag:hover {
-    color: #fcfcfc;
+    animation-name: text-glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text-glow {
+    0% {
+        color: #6c6c6c;
+    }
+    50% {
+        color:#fcfcfc;
+    }
+    100% {
+        color: #6c6c6c;
+    }
 }
 
 .project-main {
@@ -80,12 +94,12 @@
 }
 
 .project-featured-container:hover {
-    animation-name: glow;
-    animation-duration: 3s;
+    animation-name: border-glow;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-@keyframes glow {
+@keyframes border-glow {
     0% {
         border-color: #2c2c2c;
     }
@@ -97,34 +111,34 @@
     }
 }
 
-.project-featured-item-header {
+.project-item-header {
     margin-left: 2ch;
 }
 
-.project-featured-item-icon {
+.project-item-icon {
     width: 1.5ch;
 }
 
-.project-featured-item-text {
+.project-item-text {
     margin-left: 2ch;
 }
 
-.project-featured-item-description-container {
+.project-item-description-container {
     margin-left: 2ch;
 }
 
-.project-featured-item-description {
+.project-item-description {
     color: #8c8c8c;
     font-size: 1.25ch;
     margin-top: 1ch;
 }
 
-.project-featured-tag-container {
+.project-tag-container {
     margin-left: 2ch;
     margin-top: 1ch;
 }
 
-.project-featured-tag {
+.project-tag {
     border: 1px solid;
     border-radius: 1ch;
     height: 2ch;
@@ -134,7 +148,7 @@
     margin-right: 0.25ch;
 }
 
-.project-featured-tag-text {
+.project-tag-text {
     font-size: 1ch;
 }
 
@@ -143,9 +157,17 @@
 }
 
 .project-item-container {
-    border: 1px solid #2c2c2c;
+    border-bottom: 1px solid #2c2c2c;
     border-radius: 1ch;
-    height: 10ch;
+    border-top: 1px solid #2c2c2c;
+    padding-bottom: 1ch;
+    padding-top: 1ch;
     margin-top: 2ch;
     width: 99%;
+}
+
+.project-item-container:hover {
+    animation-name: border-glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }

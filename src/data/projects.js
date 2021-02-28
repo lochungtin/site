@@ -44,4 +44,6 @@ export const PRJ_Unifin = {
     ]
 }
 
-export const featured = [[PRJ_CoinControl, PRJ_Orion], [PRJ_Atlas, PRJ_Unifin]];
+export const featuredProjects = [[PRJ_CoinControl, PRJ_Orion], [PRJ_Atlas, PRJ_Unifin]];
+
+export const allProjects = [PRJ_Orion, PRJ_Unifin, PRJ_CoinControl, PRJ_Atlas];

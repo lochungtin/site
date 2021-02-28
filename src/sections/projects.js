@@ -2,18 +2,22 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import '../css/web/projects.css';
+import { featuredProjects, allProjects } from '../data/projects';
 import { tags } from '../data/tags';
 import down from '../img/triE.png';
 import ribbon from '../img/icons/ribbon.svg'
-import { featured, PRJ_CoinControl } from '../data/projects';
 
 class Screen extends React.Component {
 
-    style = styleName => `project-${(this.props.mobile ? 'm-' : '') + styleName}`;
+    style = (styleName, ...args) => {
+        let builder = '';
+        args.forEach(arg => builder += ` ${arg}`);
+        return `project-${(this.props.mobile ? 'm-' : '') + styleName + builder}`;
+    }
 
     render() {
         return (
-            <div className={'row ' + this.style('root')}>
+            <div className={this.style('root', 'row')}>
                 <div className={this.style('filter')}>
                     {Object.keys(tags).map(category => {
                         return (
@@ -68,44 +72,33 @@ class Screen extends React.Component {
                             featured
                         </p>
                     </div>
-                    <div className={'col ' + this.style('featured')}>
-                        {featured.map(row => {
+                    <div className={this.style('featured', 'col')}>
+                        {featuredProjects.map(row => {
                             return (
-                                <div className={'row ' + this.style('featured-row')}>
+                                <div className={this.style('featured-row', 'row')}>
                                     {row.map(project => {
                                         return (
                                             <div className={this.style('featured-container')}>
-                                                <div className={'row ' + this.style('featured-item-header')}>
+                                                <div className={this.style('item-header', 'row')}>
                                                     <img
                                                         alt={'ribbon'}
-                                                        className={this.style('featured-item-icon')}
+                                                        className={this.style('item-icon')}
                                                         src={ribbon}
                                                     />
-                                                    <p className={this.style('featured-item-text')}>
+                                                    <p className={this.style('item-text')}>
                                                         {project.name}
-                                                </p>
+                                                    </p>
                                                 </div>
-                                                <div className={this.style('featured-item-description-container')}>
-                                                    <p className={this.style('featured-item-description')}>
+                                                <div className={this.style('item-description-container')}>
+                                                    <p className={this.style('item-description')}>
                                                         {project.description_s}
                                                     </p>
                                                 </div>
-                                                <div className={'row ' + this.style('featured-tag-container')}>
-                                                    {project.language.map(lang => {
-                                                        return (
-                                                            <div className={'row ' + this.style('featured-tag')} style={{ borderColor: lang.color }}>
-                                                                <p className={this.style('featured-tag-text')} style={{ color: lang.color }}>
-                                                                    {lang.display}
-                                                                </p>
-                                                            </div>
-                                                        );
-                                                    })}
-                                                </div>
-                                                <div className={'row ' + this.style('featured-tag-container')}>
+                                                <div className={this.style('tag-container', 'row')}>
                                                     {project.tags.slice(0, 3).map(tag => {
                                                         return (
-                                                            <div className={'row ' + this.style('featured-tag')} style={{ borderColor: tag.color }}>
-                                                                <p className={this.style('featured-tag-text')} style={{ color: tag.color }}>
+                                                            <div className={this.style('tag', 'row')} style={{ borderColor: tag.color }}>
+                                                                <p className={this.style('tag-text')} style={{ color: tag.color }}>
                                                                     {tag.display}
                                                                 </p>
                                                             </div>
@@ -124,34 +117,53 @@ class Screen extends React.Component {
                             all projects
                         </p>
                     </div>
-                    <div className={'col ' + this.style('all')}>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
-                        <div className={this.style('item-container')}>
-
-                        </div>
+                    <div className={this.style('all', 'col')}>
+                        {allProjects.map(project => {
+                            return (
+                                <div className={this.style('item-container')}>
+                                    <div className={this.style('item-header', 'row')}>
+                                        <img
+                                            alt={'ribbon'}
+                                            className={this.style('item-icon')}
+                                            src={ribbon}
+                                        />
+                                        <p className={this.style('item-text')}>
+                                            {project.name}
+                                        </p>
+                                    </div>
+                                    <div className={this.style('item-description-container')}>
+                                        <p className={this.style('item-description')}>
+                                            {project.description_s}
+                                        </p>
+                                    </div>
+                                    <div className={this.style('tag-container', 'row')}>
+                                        {project.language.map(lang => {
+                                            return (
+                                                <div className={this.style('tag', 'row')} style={{ borderColor: lang.color }}>
+                                                    <p className={this.style('tag-text')} style={{ color: lang.color }}>
+                                                        {lang.display}
+                                                    </p>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                    <div className={this.style('tag-container', 'row')}>
+                                        {project.tags.map(tag => {
+                                            return (
+                                                <div className={this.style('tag', 'row')} style={{ borderColor: tag.color }}>
+                                                    <p className={this.style('tag-text')} style={{ color: tag.color }}>
+                                                        {tag.display}
+                                                    </p>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
