@@ -15,7 +15,9 @@ html, body {
 }
 
 button {
+    border: none;
     font-family: 'be_vietnamlight';
+    outline: none;    
 }
 
 .noselect {
