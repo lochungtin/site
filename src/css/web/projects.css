@@ -49,18 +49,6 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes text-glow {
-    0% {
-        color: #6c6c6c;
-    }
-    50% {
-        color:#fcfcfc;
-    }
-    100% {
-        color: #6c6c6c;
-    }
-}
-
 .project-main {
     overflow: scroll;
     width: 80%;
@@ -97,18 +85,6 @@
     animation-name: border-glow;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-}
-
-@keyframes border-glow {
-    0% {
-        border-color: #2c2c2c;
-    }
-    50% {
-        border-color:#8c8c8c;
-    }
-    100% {
-        border-color: #2c2c2c;
-    }
 }
 
 .project-item-header {
@@ -157,17 +133,46 @@
 }
 
 .project-item-container {
+    animation: fadein 2s forwards;
     border-bottom: 1px solid #2c2c2c;
     border-radius: 1ch;
     border-top: 1px solid #2c2c2c;
+    opacity: 0;
     padding-bottom: 1ch;
     padding-top: 1ch;
     margin-top: 2ch;
     width: 99%;
 }
 
-.project-item-container:hover {
-    animation-name: border-glow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+@keyframes text-glow {
+    0% {
+        color: #6c6c6c;
+    }
+    50% {
+        color:#fcfcfc;
+    }
+    100% {
+        color: #6c6c6c;
+    }
+}
+@keyframes border-glow {
+    0% {
+        border-color: #2c2c2c;
+    }
+    50% {
+        border-color:#8c8c8c;
+    }
+    100% {
+        border-color: #2c2c2c;
+
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

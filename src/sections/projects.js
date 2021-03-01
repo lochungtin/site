@@ -118,9 +118,9 @@ class Screen extends React.Component {
                         </p>
                     </div>
                     <div className={this.style('all', 'col')}>
-                        {allProjects.map(project => {
+                        {allProjects.map((project, index) => {
                             return (
-                                <div className={this.style('item-container')}>
+                                <div className={this.style('item-container')} style={{animationDelay: `${index / 5}s`}}>
                                     <div className={this.style('item-header', 'row')}>
                                         <img
                                             alt={'ribbon'}
