@@ -1,0 +1,72 @@
+.about-root {
+    height: 100vh;
+    width: 100ch;
+}
+
+.about-side {
+    position: fixed;
+    width: 25ch;
+}
+
+.about-propic-container {
+    border-right: 1px solid #fcfcfc;
+    border-bottom: 1px solid #fcfcfc;
+    border-radius: 18ch;
+    height: 25ch;
+    justify-content: center;
+    width: 25ch;
+}
+
+.about-propic {
+    height: 23ch;
+    width: 23ch;
+    border-radius: 18ch;
+}
+
+.about-side-text {
+    align-items: flex-start !important;
+    margin-bottom: 2ch;
+    margin-top: 2ch;
+    width: 25ch;
+}
+
+.about-side-text-container {
+    width: 25ch;
+}
+
+.about-fullname {
+    color: #4c4c4c;
+    font-size: 3ch;
+}
+
+.about-givenname {
+    font-size: 2ch;
+}
+
+.about-bio {
+    border-bottom: 2px solid #2c2c2c;
+    border-top: 2px solid #2c2c2c;
+    font-size: 1.5ch;
+    margin-top: 2ch;
+    padding-bottom: 1.5ch;
+    padding-top: 1ch;
+}
+
+.about-side-info-row {
+    justify-content: space-between;
+    margin-bottom: 1ch;
+    width: 24ch;
+}
+
+.about-side-info-icon {
+    width: 2ch;
+}
+
+.about-side-info-text-container {
+    width: 18ch;
+}
+
+.about-side-info-text {
+    text-align: left;
+    font-size: 1.3ch;
+}

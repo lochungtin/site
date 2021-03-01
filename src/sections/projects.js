@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import '../css/web/projects.css';
 import { featuredProjects, allProjects } from '../data/projects';
 import { tags } from '../data/tags';
-import down from '../img/triE.png';
+import down from '../img/icons/chevron-down.svg';
 import ribbon from '../img/icons/ribbon.svg'
 
 class Screen extends React.Component {
@@ -120,7 +120,7 @@ class Screen extends React.Component {
                     <div className={this.style('all', 'col')}>
                         {allProjects.map((project, index) => {
                             return (
-                                <div className={this.style('item-container')} style={{animationDelay: `${index / 5}s`}}>
+                                <div className={this.style('item-container')} style={{ animationDelay: `${index / 5}s` }}>
                                     <div className={this.style('item-header', 'row')}>
                                         <img
                                             alt={'ribbon'}

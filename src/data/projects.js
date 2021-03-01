@@ -1,4 +1,4 @@
-import { android, ios, filesystem, javascript, raspberrypi, reactjs, reactnative, reactnav, redux, socket, cpp, java, arduino, javafx, projection, insomnia, mongodb, axios, googlecloud, googlevisionapi, mocap, serial, spi, i2c, } from "./tags";
+import { android, ios, filesystem, javascript, raspberrypi, reactjs, reactnative, reactnav, redux, socket, c, java, arduino, javafx, insomnia, mongodb, axios, googlecloud, googlevisionapi, mocap, serial, spi, i2c, electronjs, } from "./tags";
 
 export const PRJ_CoinControl = {
     name: 'CoinControl',
@@ -18,7 +18,7 @@ export const PRJ_Orion = {
         javascript
     ],
     tags: [
-        reactjs, mongodb, raspberrypi, socket, filesystem, axios, insomnia
+        reactjs, mongodb, raspberrypi, socket, filesystem, electronjs, axios, insomnia
     ],
 };
 
@@ -26,7 +26,7 @@ export const PRJ_Atlas = {
     name: 'Atlas',
     description_s: 'Motion Control - Wearable Mice',
     language: [
-        cpp, java
+        c, java
     ],
     tags: [
         mocap, arduino, javafx, serial, spi, i2c

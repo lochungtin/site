@@ -23,6 +23,13 @@ export const javafx = {
     name: 'javafx',
 };
 
+export const electronjs = {
+    category: 'framework',
+    color: white,
+    display: 'ElectronJS',
+    name: 'electronjs',
+};
+
 // libraries
 
 export const redux = {
@@ -74,13 +81,6 @@ export const projection = {
     color: mid,
     display: '3D Projection',
     name: 'projection',
-};
-
-export const insomnia = {
-    category: 'technology',
-    color: mid,
-    display: 'Insomnia',
-    name: 'Insomnia',
 };
 
 export const mocap = {
@@ -164,6 +164,13 @@ export const googlevisionapi = {
     name: 'googlevisionapi',
 };
 
+export const docker = {
+    category: 'service',
+    color: lighter,
+    display: 'Docker',
+    name: 'docker',
+};
+
 // languages
 
 export const javascript = {
@@ -180,12 +187,78 @@ export const java = {
     name: 'java',
 };
 
+export const c = {
+    category: 'language',
+    color: white,
+    display: 'C',
+    name: 'c',
+};
+
 export const cpp = {
     category: 'language',
     color: white,
     display: 'C++',
     name: 'cpp',
 };
+
+export const scala = {
+    category: 'language',
+    color: white,
+    display: 'Scala',
+    name: 'scala',
+};
+
+export const html = {
+    category: 'language',
+    color: white,
+    display: 'HTML5',
+    name: 'html',
+};
+
+export const css = {
+    category: 'language',
+    color: white,
+    display: 'CSS3',
+    name: 'css',
+};
+
+export const python = {
+    category: 'language',
+    color: white,
+    display: 'Python',
+    name: 'python',
+};
+
+export const php = {
+    category: 'language',
+    color: white,
+    display: 'PHP',
+    name: 'php',
+};
+
+// tools
+
+export const intellij = {
+    category: 'tools',
+    color: mid,
+    display: 'IntelliJ',
+    name: 'intellij',
+};
+
+export const vscode = {
+    category: 'tools',
+    color: mid,
+    display: 'VSCode',
+    name: 'vscode',
+};
+
+export const insomnia = {
+    category: 'tools',
+    color: mid,
+    display: 'Insomnia',
+    name: 'insomnia',
+};
+
 
 // all tags
 
