@@ -11,12 +11,12 @@
 }
 
 .landing-line {
-    background-color: #fcfcfc;
+    background: #0c0c0c;
+    background: linear-gradient(90deg, rgba(252, 252, 252, 1) 0%, rgba(252, 252, 252, 0.3));
+    border-radius: 0.2vh;
     display: flex;
     height: 0.4vh;
     position: absolute;
-    opacity: 0.3;
-    border-radius: 0.2vh;
 }
 
 .landing-bg-img {

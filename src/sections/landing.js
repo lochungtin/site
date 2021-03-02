@@ -18,7 +18,7 @@ class Screen extends React.Component {
         return (
             <div className={this.style('root', 'row')}>
                 <div className={this.style('line')} style={{ top: '27.9vh', width: `${lineWidth}px` }} />
-                    <div className={this.style('line')} style={{ top: '29.85vh', width: `${lineWidth}px` }} />
+                    <div className={this.style('line')} style={{ top: '29.8vh', width: `${lineWidth}px` }} />
                     <div className={this.style('line')} style={{ top: '31.9vh', width: `${lineWidth}px` }} />
                 <div className={this.style('left')}>
 
