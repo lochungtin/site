@@ -1,10 +1,10 @@
 .about-root {
-    height: 100vh;
+    height: 100%;
     width: 100ch;
 }
 
 .about-side {
-    position: fixed;
+    height: 100%;
     width: 25ch;
 }
 
@@ -14,6 +14,7 @@
     border-radius: 18ch;
     height: 25ch;
     justify-content: center;
+    margin-top: 5ch;
     width: 25ch;
 }
 
