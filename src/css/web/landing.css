@@ -1,0 +1,25 @@
+.landing-root {
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.landing-left {
+    display: flex;
+    flex: 1;
+
+    height: 100vh;
+}
+
+.landing-line {
+    background-color: #fcfcfc;
+    display: flex;
+    height: 0.4vh;
+    position: absolute;
+    opacity: 0.3;
+    border-radius: 0.2vh;
+}
+
+.landing-bg-img {
+    height: 100vh;
+    opacity: 0.3;
+}

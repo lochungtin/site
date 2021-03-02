@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import '../css/web/landing.css';
+import background from '../img/background.png';
 
 class Screen extends React.Component {
 
@@ -12,15 +13,28 @@ class Screen extends React.Component {
     }
 
     render() {
+        const lineWidth = this.props.dim.width - (this.props.dim.height * 961 / 1062);
+
         return (
             <div className={this.style('root', 'row')}>
-                
-            </div >
+                <div className={this.style('line')} style={{ top: '27.9vh', width: `${lineWidth}px` }} />
+                    <div className={this.style('line')} style={{ top: '29.85vh', width: `${lineWidth}px` }} />
+                    <div className={this.style('line')} style={{ top: '31.9vh', width: `${lineWidth}px` }} />
+                <div className={this.style('left')}>
+
+                </div>
+                <img
+                    alt='map'
+                    className={this.style('bg-img')}
+                    src={background}
+                />
+            </div>
         );
     }
 }
 
 const mapStateToProps = state => ({
+    dim: state.dim,
     mobile: state.mobile,
 });
 

@@ -6,22 +6,36 @@ import About from '../sections/about';
 import landing from '../sections/landing';
 import Projects from '../sections/projects';
 
+import { store } from '../redux/store';
+
 import '../css/web/nav.css';
+import { setDim } from '../redux/action';
 
 class AppNav extends React.Component {
 
     constructor(props) {
         super(props);
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => store.dispatch(setDim({ width: window.innerWidth, height: window.innerHeight }));
+
     style = styleName => `nav-${(this.props.mobile ? 'm-' : '') + styleName}`
+
+    //<div className={this.style('bar')} />
 
     render() {
         return (
             <Router>
-                <div className={this.style('bar')}>
-
-                </div>
                 <div className={this.style('container', 'col')}>
                     <Switch >
                         <Route exact path='/' component={landing} />
