@@ -13,7 +13,7 @@ class Screen extends React.Component {
     }
 
     render() {
-        const lineWidth = this.props.dim.width - (this.props.dim.height * 961 / 1062);
+        const lineWidth = this.props.dim.width - (this.props.dim.height * 995 / 1062);
 
         return (
             <div className={this.style('root', 'row')}>

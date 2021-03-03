@@ -16,6 +16,7 @@
     border-radius: 0.2vh;
     display: flex;
     height: 0.4vh;
+    left: 1vw;
     position: absolute;
 }
 

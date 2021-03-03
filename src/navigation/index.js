@@ -38,9 +38,9 @@ class AppNav extends React.Component {
             <Router>
                 <div className={this.style('container', 'col')}>
                     <Switch >
-                        <Route exact path='/' component={landing} />
-                        <Route exact path='/about' component={About} />
-                        <Route exact path='/projects' component={Projects} />
+                        <Route exact path='/site/' component={landing} />
+                        <Route exact path='/site/about' component={About} />
+                        <Route exact path='/site/projects' component={Projects} />
                     </Switch>
                 </div>
             </Router>
