@@ -31,6 +31,8 @@ class Screen extends React.Component {
         }
     }
 
+    nav = link => window.location.href = link;
+
     style = (styleName, ...args) => {
         let builder = '';
         args.forEach(arg => builder += ` ${arg}`);
@@ -47,17 +49,11 @@ class Screen extends React.Component {
                 <div className={this.style('line')} style={{ opacity: this.props.dim.width > 1350 ? 1 : 0.07, top: '31.9vh', width: `${lineWidth}px` }} />
                 <div className={this.style('left-spacer')}>
                     <div className={this.style('left')}>
-                        <p className={this.style('top-text')}>
-                            <span className={this.style('top-text-large')}>
-                                {'HI THERE! '}
-                            </span>
-                            Welcome to my personal website
-                        </p>
                         <p className={this.style('middle-text')}>
                             My name is Timothy Lo
                         </p>
                         <p className={this.style('bottom-text')}>
-                            I am a second year computer science student studying at King's College London
+                            I am a second year computer science student studying at King's College London.
                         </p>
                     </div>
                 </div>
@@ -68,21 +64,21 @@ class Screen extends React.Component {
                     style={{ opacity: this.props.dim.width > 1350 ? 0.3 : 0.07 }}
                 />
                 <div className={this.style('social-icon-container', 'row')}>
-                    <button className={this.style('social-icon-btn', 'landing-github')}>
+                    <button className={this.style('social-icon-btn', 'landing-github')} onClick={() => this.nav('https://www.github.com/lochungtin/')}>
                         <img
                             alt='icon'
                             className={this.style('social-icon')}
                             src={Github}
                         />
                     </button>
-                    <button className={this.style('social-icon-btn', 'landing-instagram')}>
+                    <button className={this.style('social-icon-btn', 'landing-instagram')} onClick={() => this.nav('https://www.instagram.com/lochungtin/')}>
                         <img
                             alt='icon'
                             className={this.style('social-icon')}
                             src={Instagram}
                         />
                     </button>
-                    <button className={this.style('social-icon-btn', 'landing-linkedin')}>
+                    <button className={this.style('social-icon-btn', 'landing-linkedin')} onClick={() => this.nav('https://www.linkedin.com/in/timothy-lo-chung-tin/')}>
                         <img
                             alt='icon'
                             className={this.style('social-icon')}
