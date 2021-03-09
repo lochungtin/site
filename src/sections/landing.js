@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import NavBar from '../components/NavBar';
 
 import '../css/web/landing.css';
 import background from '../img/background.png';
@@ -41,25 +42,29 @@ class Screen extends React.Component {
 
     render() {
         const lineWidth = this.props.dim.width - (this.props.dim.height * 995 / 1062);
-
+        console.log(this.props.dim);
         return (
             <div className={this.style('root', 'row')}>
+                <NavBar />
                 <div className={this.style('line')} style={{ opacity: this.props.dim.width > 1350 ? 1 : 0.07, top: '27.9vh', width: `${lineWidth}px` }} />
                 <div className={this.style('line')} style={{ opacity: this.props.dim.width > 1350 ? 1 : 0.07, top: '29.8vh', width: `${lineWidth}px` }} />
                 <div className={this.style('line')} style={{ opacity: this.props.dim.width > 1350 ? 1 : 0.07, top: '31.9vh', width: `${lineWidth}px` }} />
                 <div className={this.style('left-spacer')}>
                     <div className={this.style('left')}>
-                        <p className={this.style('middle-text')}>
+                        <p className={this.style('top-text', 'noselect')}>
                             My name is Timothy Lo
                         </p>
-                        <p className={this.style('bottom-text')}>
+                        <p className={this.style('middle-text', 'noselect')}>
                             I am a second year computer science student studying at King's College London.
+                        </p>
+                        <p className={this.style('bottom-text', 'noselect')}>
+                            Welcome to my personal website.
                         </p>
                     </div>
                 </div>
                 <img
                     alt='map'
-                    className={this.style('bg-img')}
+                    className={this.style('bg-img', 'noselect')}
                     src={background}
                     style={{ opacity: this.props.dim.width > 1350 ? 0.3 : 0.07 }}
                 />
@@ -67,28 +72,28 @@ class Screen extends React.Component {
                     <button className={this.style('social-icon-btn', 'landing-github')} onClick={() => this.nav('https://www.github.com/lochungtin/')}>
                         <img
                             alt='icon'
-                            className={this.style('social-icon')}
+                            className={this.style('social-icon', 'noselect')}
                             src={Github}
                         />
                     </button>
                     <button className={this.style('social-icon-btn', 'landing-instagram')} onClick={() => this.nav('https://www.instagram.com/lochungtin/')}>
                         <img
                             alt='icon'
-                            className={this.style('social-icon')}
+                            className={this.style('social-icon', 'noselect')}
                             src={Instagram}
                         />
                     </button>
                     <button className={this.style('social-icon-btn', 'landing-linkedin')} onClick={() => this.nav('https://www.linkedin.com/in/timothy-lo-chung-tin/')}>
                         <img
                             alt='icon'
-                            className={this.style('social-icon')}
+                            className={this.style('social-icon', 'noselect')}
                             src={LinkedIn}
                         />
                     </button>
                     <button className={this.style('social-icon-btn', 'landing-gmail')} onClick={this.copy}>
                         <img
                             alt='icon'
-                            className={this.style('social-icon')}
+                            className={this.style('social-icon', 'noselect')}
                             src={Gmail}
                         />
                     </button>

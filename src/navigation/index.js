@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import About from '../sections/about';
 import landing from '../sections/landing';
@@ -29,18 +29,22 @@ class AppNav extends React.Component {
 
     updateWindowDimensions = () => store.dispatch(setDim({ width: window.innerWidth, height: window.innerHeight }));
 
-    style = styleName => `nav-${(this.props.mobile ? 'm-' : '') + styleName}`
+    style = (styleName, ...args) => {
+        let builder = '';
+        args.forEach(arg => builder += ` ${arg}`);
+        return `nav-${(this.props.mobile ? 'm-' : '') + styleName + builder}`;
+    }
 
     render() {
         return (
             <Router>
-                <div className={this.style('container', 'col')}>
-                    <Switch >
+                <Switch >
+                    <div className={this.style('content', 'col')}>
                         <Route exact path='/' component={landing} />
-                        <Route exact path='/about' component={About} />
                         <Route exact path='/projects' component={Projects} />
-                    </Switch>
-                </div>
+                        <Route exact path='/about' component={About} />
+                    </div>
+                </Switch>
             </Router>
         );
     }

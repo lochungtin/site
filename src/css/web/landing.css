@@ -25,22 +25,36 @@
 }
 
 .landing-top-text {
-    color: #8c8c8c;
-    font-size: 2.5ch;
-    padding-left: 6vw;
-    padding-top: 12vh;
-}
-
-.landing-middle-text {
     font-size: 4ch;
     padding-left: 15vw;
     padding-top: 40vh;
 }
 
-.landing-bottom-text {
+.landing-middle-text {
     color: #6c6c6c;
     padding-left: 15vw;
+    padding-top: 1vh;
     width: 55ch;
+}
+
+.landing-bottom-text {
+    color: #acacac;
+    font-size: 2ch;
+    padding-left: 15vw;
+    padding-top: 5vh;
+    width: 55ch;
+}
+
+.landing-bg-img {
+    height: 100vh;
+}
+
+.landing-social-icon-container {
+    bottom: 6vh;
+    justify-content: space-between;
+    left: 6vw;
+    position: absolute;
+    width: 50ch;
 }
 
 .landing-social-icon-btn {
@@ -59,16 +73,4 @@
     bottom: 6.5vh;
     left: 30vw;
     width: 17ch;
-}
-
-.landing-bg-img {
-    height: 100vh;
-}
-
-.landing-social-icon-container {
-    bottom: 6vh;
-    justify-content: space-between;
-    left: 6vw;
-    position: absolute;
-    width: 50ch;
 }
