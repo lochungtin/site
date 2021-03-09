@@ -1,5 +1,6 @@
 .landing-root {
     justify-content: space-between;
+    transform: none;
     width: 100vw;
 }
 
@@ -46,32 +47,32 @@
     width: 55ch;
 }
 
-.landing-social-icon-container {
-    justify-content: space-between;
-    margin-top: 35vh;
-    margin-left: 6vw;
-    width: 50ch;
-}
-
 .landing-social-icon-btn {
     background-color: transparent;
+    bottom: 5vh;
     opacity: 0.2;
-    width: 5ch;
     transition: 0.5s;
+    width: 5ch;
 }
 
 .landing-social-icon-btn:hover {
     opacity: 1;
 }
 
-.landing-social-icon {
-    width: 5ch;    
-}
-
 .landing-social-prompt {
+    bottom: 6.5vh;
+    left: 30vw;
     width: 17ch;
 }
 
 .landing-bg-img {
     height: 100vh;
+}
+
+.landing-social-icon-container {
+    bottom: 6vh;
+    justify-content: space-between;
+    left: 6vw;
+    position: absolute;
+    width: 50ch;
 }

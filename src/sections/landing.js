@@ -10,6 +10,27 @@ import LinkedIn from '../img/icons/linkedin.svg';
 
 class Screen extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            promptOpacity: 0,
+        }
+    }
+
+    copy = () => {
+        navigator.clipboard.writeText('lochungtin@gmail.com');
+        this.setState({ promptShow: 1 });
+        this.decreaseOpacity(1);
+    }
+
+    decreaseOpacity = value => {
+        if (value > 0) {
+            const promptOpacity = value - 0.05;
+            this.setState({ promptOpacity });
+            setTimeout(() => this.decreaseOpacity(promptOpacity), 50);
+        }
+    }
+
     style = (styleName, ...args) => {
         let builder = '';
         args.forEach(arg => builder += ` ${arg}`);
@@ -38,39 +59,6 @@ class Screen extends React.Component {
                         <p className={this.style('bottom-text')}>
                             I am a second year computer science student studying at King's College London
                         </p>
-                        <div className={this.style('social-icon-container', 'row')}>
-                            <button className={this.style('social-icon-btn')}>
-                                <img
-                                    alt='icon'
-                                    className={this.style('social-icon')}
-                                    src={Github}
-                                />
-                            </button>
-                            <button className={this.style('social-icon-btn')}>
-                                <img
-                                    alt='icon'
-                                    className={this.style('social-icon')}
-                                    src={Instagram}
-                                />
-                            </button>
-                            <button className={this.style('social-icon-btn')}>
-                                <img
-                                    alt='icon'
-                                    className={this.style('social-icon')}
-                                    src={LinkedIn}
-                                />
-                            </button>
-                            <button className={this.style('social-icon-btn')}>
-                                <img
-                                    alt='icon'
-                                    className={this.style('social-icon')}
-                                    src={Gmail}
-                                />
-                            </button>
-                            <p className={this.style('social-prompt')}>
-                                Copied to Clickboard
-                            </p>
-                        </div>
                     </div>
                 </div>
                 <img
@@ -79,6 +67,39 @@ class Screen extends React.Component {
                     src={background}
                     style={{ opacity: this.props.dim.width > 1350 ? 0.3 : 0.07 }}
                 />
+                <div className={this.style('social-icon-container', 'row')}>
+                    <button className={this.style('social-icon-btn', 'landing-github')}>
+                        <img
+                            alt='icon'
+                            className={this.style('social-icon')}
+                            src={Github}
+                        />
+                    </button>
+                    <button className={this.style('social-icon-btn', 'landing-instagram')}>
+                        <img
+                            alt='icon'
+                            className={this.style('social-icon')}
+                            src={Instagram}
+                        />
+                    </button>
+                    <button className={this.style('social-icon-btn', 'landing-linkedin')}>
+                        <img
+                            alt='icon'
+                            className={this.style('social-icon')}
+                            src={LinkedIn}
+                        />
+                    </button>
+                    <button className={this.style('social-icon-btn', 'landing-gmail')} onClick={this.copy}>
+                        <img
+                            alt='icon'
+                            className={this.style('social-icon')}
+                            src={Gmail}
+                        />
+                    </button>
+                    <p className={this.style('social-prompt')} style={{ opacity: this.state.promptOpacity }}>
+                        Copied to Clickboard
+                    </p>
+                </div>
             </div>
         );
     }
