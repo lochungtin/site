@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import '../css/web/about.css';
-import { about, info, } from '../data/about';
+import { info, } from '../data/about';
 
 import propic from '../img/propic.jpg';
 

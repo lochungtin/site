@@ -65,7 +65,7 @@ export const axios = {
 export const socket = {
     category: 'technology',
     color: mid,
-    display: 'Socket Communication',
+    display: 'Socket Server',
     name: 'technology',
 };
 
