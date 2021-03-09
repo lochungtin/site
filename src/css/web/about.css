@@ -1,4 +1,8 @@
 .about-root {
+    width: 100vw;
+}
+
+.about-content {
     height: 100%;
     width: 100ch;
 }

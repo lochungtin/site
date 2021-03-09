@@ -26,7 +26,7 @@ class Screen extends React.Component {
     }
 
     onClick = link => {
-        if (link.endsWith('@gmail.com')) {
+        if (link.startsWith('lochu')) {
             navigator.clipboard.writeText('lochungtin@gmail.com');
             this.setState({ promptShow: 1 });
             this.decreaseOpacity(1);
