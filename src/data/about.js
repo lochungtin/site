@@ -1,30 +1,49 @@
 import github from '../img/icons/github.svg';
+import gmail from '../img/icons/gmail.svg';
 import instagram from '../img/icons/instagram.svg';
 import linkedin from '../img/icons/linkedin.svg';
 import location from '../img/icons/location.svg';
 import { c, cpp, css, docker, electronjs, html, insomnia, intellij, java, javascript, php, python, reactjs, reactnative, scala, vscode } from "./tags";
+
+export const landingText = {
+    top: 'My name is Timothy Lo',
+    middle: 'I am a second year computer science student studying at King\'s College London.',
+    bottom: 'Welcome to my personal website.',
+}
+
+export const socials = [
+    {
+        icon: github,
+        link: 'https://www.github.com/lochungtin/',
+        text: 'lochungtin',
+    },
+    {
+        icon: instagram,
+        link: 'https://www.instagram.com/lochungtin/',
+        text: '@lochungtin',
+    },
+    {
+        icon: linkedin,
+        link: 'https://www.linkedin.com/in/timothy-lo-chung-tin/',
+        text: 'Timothy Lo',
+    },
+    {
+        icon: gmail,
+        link: 'lochungtin@gmail.com',
+        text: 'lochungtin@gmail.com',
+    }
+]
 
 export const info = {
     fName: 'Lo Chung Tin',
     gName: 'Timothy',
     bio: 'Undergraduate  - BSc Computer Science (Second Year)',
     sideRowInfo: [
-        { 
-            icon: location, 
-            text: 'Hong Kong', 
+        {
+            icon: location,
+            text: 'Hong Kong',
         },
-        { 
-            icon: github, 
-            text: 'lochungtin', 
-        },
-        { 
-            icon: instagram, 
-            text: '@lochungtin',
-        },
-        { 
-            icon: linkedin, 
-            text: 'Timothy Lo',
-        },
+        ...socials,
     ]
 };
 

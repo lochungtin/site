@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import '../css/web/about.css';
 import { info, } from '../data/about';
-
 import propic from '../img/propic.jpg';
 
 class Screen extends React.Component {

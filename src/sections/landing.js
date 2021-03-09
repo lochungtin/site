@@ -1,13 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import NavBar from '../components/NavBar';
+import SocialBtn from '../components/SocialBtn';
 
 import '../css/web/landing.css';
+import { landingText, socials, } from '../data/about';
 import background from '../img/background.png';
-import Github from '../img/icons/github.svg';
-import Gmail from '../img/icons/gmail.svg';
-import Instagram from '../img/icons/instagram.svg';
-import LinkedIn from '../img/icons/linkedin.svg';
 
 class Screen extends React.Component {
 
@@ -18,12 +17,6 @@ class Screen extends React.Component {
         }
     }
 
-    copy = () => {
-        navigator.clipboard.writeText('lochungtin@gmail.com');
-        this.setState({ promptShow: 1 });
-        this.decreaseOpacity(1);
-    }
-
     decreaseOpacity = value => {
         if (value > 0) {
             const promptOpacity = value - 0.05;
@@ -32,7 +25,15 @@ class Screen extends React.Component {
         }
     }
 
-    nav = link => window.location.href = link;
+    onClick = link => {
+        if (link.endsWith('@gmail.com')) {
+            navigator.clipboard.writeText('lochungtin@gmail.com');
+            this.setState({ promptShow: 1 });
+            this.decreaseOpacity(1);
+        }
+        else
+            window.location.href = link;
+    }
 
     style = (styleName, ...args) => {
         let builder = '';
@@ -42,7 +43,6 @@ class Screen extends React.Component {
 
     render() {
         const lineWidth = this.props.dim.width - (this.props.dim.height * 995 / 1062);
-        console.log(this.props.dim);
         return (
             <div className={this.style('root', 'row')}>
                 <NavBar />
@@ -51,15 +51,13 @@ class Screen extends React.Component {
                 <div className={this.style('line')} style={{ opacity: this.props.dim.width > 1350 ? 1 : 0.07, top: '31.9vh', width: `${lineWidth}px` }} />
                 <div className={this.style('left-spacer')}>
                     <div className={this.style('left')}>
-                        <p className={this.style('top-text', 'noselect')}>
-                            My name is Timothy Lo
-                        </p>
-                        <p className={this.style('middle-text', 'noselect')}>
-                            I am a second year computer science student studying at King's College London.
-                        </p>
-                        <p className={this.style('bottom-text', 'noselect')}>
-                            Welcome to my personal website.
-                        </p>
+                        {Object.keys(landingText).map(key => {
+                            return (
+                                <p className={this.style(`${key}-text`, 'noselect')}>
+                                    {landingText[key]}
+                                </p>
+                            );
+                        })}
                     </div>
                 </div>
                 <img
@@ -69,34 +67,7 @@ class Screen extends React.Component {
                     style={{ opacity: this.props.dim.width > 1350 ? 0.3 : 0.07 }}
                 />
                 <div className={this.style('social-icon-container', 'row')}>
-                    <button className={this.style('social-icon-btn', 'landing-github')} onClick={() => this.nav('https://www.github.com/lochungtin/')}>
-                        <img
-                            alt='icon'
-                            className={this.style('social-icon', 'noselect')}
-                            src={Github}
-                        />
-                    </button>
-                    <button className={this.style('social-icon-btn', 'landing-instagram')} onClick={() => this.nav('https://www.instagram.com/lochungtin/')}>
-                        <img
-                            alt='icon'
-                            className={this.style('social-icon', 'noselect')}
-                            src={Instagram}
-                        />
-                    </button>
-                    <button className={this.style('social-icon-btn', 'landing-linkedin')} onClick={() => this.nav('https://www.linkedin.com/in/timothy-lo-chung-tin/')}>
-                        <img
-                            alt='icon'
-                            className={this.style('social-icon', 'noselect')}
-                            src={LinkedIn}
-                        />
-                    </button>
-                    <button className={this.style('social-icon-btn', 'landing-gmail')} onClick={this.copy}>
-                        <img
-                            alt='icon'
-                            className={this.style('social-icon', 'noselect')}
-                            src={Gmail}
-                        />
-                    </button>
+                    {socials.map(obj => <SocialBtn icon={obj.icon} onClick={() => this.onClick(obj.link)} />)}
                     <p className={this.style('social-prompt')} style={{ opacity: this.state.promptOpacity }}>
                         Copied to Clickboard
                     </p>
