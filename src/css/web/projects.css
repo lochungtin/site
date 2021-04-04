@@ -1,24 +1,26 @@
 .project-root {
     align-items: flex-start !important;
-    justify-content: space-between;
+    justify-content: center;
     height: 100vh;
-    padding-top: 5ch;
+    padding-top: 10ch;
     width: 100ch;
+    z-index: 0;
 }
 
 .project-filter {
+    margin-right: 3ch;
     width: 15ch;
 }
 
 .project-filter-category-container {
-    margin-bottom: 3ch;
+    margin-bottom: 2ch;
 }
 
 .project-filter-category {
     border-bottom: 1px solid #cccccc;
     height: 4ch;
     justify-content: space-between;
-    margin-bottom: 2ch;
+    margin-bottom: 1ch;
 }
 
 .project-filter-category-text {
@@ -129,7 +131,8 @@
 }
 
 .project-all {
-    justify-content: center;
+    overflow-y: scroll;
+    height: 50vh;
 }
 
 .project-item-container {

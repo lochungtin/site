@@ -17,7 +17,7 @@ class Screen extends React.Component {
     render() {
         return (
             <div className={this.style('root', 'col')}>
-                <NavBar />
+                <NavBar center />
                 <div className={this.style('content', 'row')}>
                     <div className={this.style('side', 'col')}>
                         <div className={this.style('propic-container', 'row')}>

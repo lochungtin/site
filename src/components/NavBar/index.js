@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import Btn from './Btn';
 
 class NavBar extends React.Component {
 
@@ -15,42 +15,32 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className={this.style('bar-root')}>
-                <div className={this.style('bar', 'row')}>
-                    <Link
-                        className={this.style('btn', 'noselect')}
+                <div className={this.style(this.props.center ? 'bar-center' : 'bar', 'row')}>
+                    <Btn
+                        label='Home'
                         style={this.opacityControl('site#/')}
                         to='/'
-                    >
-                        <p>Home</p>
-                    </Link>
-                    <Link
-                        className={this.style('btn', 'noselect')}
-                        style={this.opacityControl('projects')}
-                        to='/projects'
-                    >
-                        <p>Projects</p>
-                    </Link>
-                    <Link
-                        className={this.style('btn', 'noselect')}
+                    />
+                    <Btn
+                        label='About'
                         style={this.opacityControl('about')}
                         to='/about'
-                    >
-                        <p>About</p>
-                    </Link>
-                    <Link
-                        className={this.style('btn', 'noselect')}
+                    />
+                    <Btn
+                        label='Projects'
+                        style={this.opacityControl('projects')}
+                        to='/projects'
+                    />
+                    <Btn
+                        label='Achievements'
                         style={this.opacityControl('achievements')}
                         to='/achievements'
-                    >
-                        <p>Achievements</p>
-                    </Link>
-                    <Link
-                        className={this.style('btn', 'noselect')}
+                    />
+                    <Btn
+                        label='Resume'
                         style={this.opacityControl('resume')}
                         to='/resume'
-                    >
-                        <p>Resume</p>
-                    </Link>
+                    />
                 </div>
             </div>
         );
