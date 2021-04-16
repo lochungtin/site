@@ -1,4 +1,4 @@
-import { android, ios, filesystem, javascript, raspberrypi, reactjs, reactnative, reactnav, redux, socket, c, java, arduino, javafx, insomnia, mongodb, axios, googlecloud, googlevisionapi, mocap, serial, spi, i2c, electronjs, } from "./tags";
+import { android, ios, filesystem, javascript, raspberrypi, reactjs, reactnative, reactnav, redux, socket, c, java, arduino, javafx, insomnia, mongodb, axios, googlecloud, googlevisionapi, mocap, serial, spi, i2c, electronjs, wifi, http } from "./tags";
 
 export const PRJ_CoinControl = {
     name: 'CoinControl',
@@ -44,6 +44,18 @@ export const PRJ_Unifin = {
     ]
 }
 
-export const featuredProjects = [[PRJ_CoinControl, PRJ_Orion], [PRJ_Atlas, PRJ_Unifin]];
+export const PRJ_Pyxelite = {
+    name: 'Pyxelite',
+    description_s: 'React Native ARGB Controller',
+    language: [
+        javascript,
+        c,
+    ],
+    tags: [
+        reactnative, arduino, http, serial, axios, wifi, insomnia
+    ]
+}
 
-export const allProjects = [PRJ_Orion, PRJ_Unifin, PRJ_CoinControl, PRJ_Atlas];
+export const featuredProjects = [[PRJ_CoinControl, PRJ_Orion], [PRJ_Atlas, PRJ_Pyxelite]];
+
+export const allProjects = [PRJ_Pyxelite, PRJ_Orion, PRJ_CoinControl, PRJ_Atlas, PRJ_Unifin];

@@ -111,6 +111,20 @@ export const i2c = {
     name: 'i2c',
 };
 
+export const http = {
+    category: 'technology',
+    color: mid,
+    display: 'HTTP Server',
+    name: 'http'
+};
+
+export const wifi = {
+    category: 'technology',
+    color: mid,
+    display: 'WiFi',
+    name: 'wifi'
+};
+
 // platforms
 
 export const android = {

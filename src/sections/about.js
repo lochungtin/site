@@ -57,6 +57,7 @@ class Screen extends React.Component {
                             })}
                         </div>
                     </div>
+                    
                 </div >
             </div>
         );
