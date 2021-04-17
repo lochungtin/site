@@ -1,32 +1,15 @@
 import React from 'react';
-import { NextRouter, withRouter, } from 'next/router';
 
-interface WithRouterProps {
-    router: NextRouter
-  }
-  
-interface Props extends WithRouterProps {}
+import ResponsiveHandler from '../utils/ResponsiveHandler';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
-class App extends React.Component<Props> {
+export default function App() {
 
-    componentDidMount() {
-        
-    }
-
-    render() {
-        return (
-            <div>
-                <p>
-                    test
-                </p>
-            </div>
-        );
-    }
-
-
-    state = {
-
-    };
+    return (
+        <div>
+            <Header />
+            <Footer />
+        </div>
+    );
 }
-
-export default withRouter(App);

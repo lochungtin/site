@@ -1,0 +1,44 @@
+.headerContainer {
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 13ch;
+  width: 100vw;
+}
+
+.headerTopBarBG {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 5ch;
+  justify-content: center;
+  width: 100vw;
+}
+
+.headerTopBar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerTopBarText {
+  color: white;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8ch;
+}
+
+.headerNavBtnText {
+  color: #565656;
+  transition: 0.2s;
+}
+
+.headerNavBtnText:hover {
+  color: black
+}

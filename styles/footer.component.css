@@ -1,0 +1,31 @@
+footer {
+    align-items: center;
+    background-color: #fafaff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    min-height: 30ch;
+    width: 100vw;
+}
+
+.footerColumns {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerColumn {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2ch;
+    margin-bottom: 2ch;
+    min-width: 20ch;
+    width: 15vw;
+}
+
+.footerColumnTitleText {
+    margin-bottom: 1.5ch;
+}
+
