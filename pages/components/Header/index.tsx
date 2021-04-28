@@ -15,9 +15,11 @@ export default function Header() {
                     <p className="headerTopBarText">
                         Some Text
                     </p>
-                    {layout !== ResponsiveHandler.layout.MOBILEVIEW && <p className="headerTopBarText">
-                        Some more text on the right
-                    </p>}
+                    {layout !== ResponsiveHandler.layout.MOBILEVIEW &&
+                        <p className="headerTopBarText">
+                            Some more text on the right
+                        </p>
+                    }
                 </div>
             </div>
             <nav style={{ width }}>
@@ -25,8 +27,9 @@ export default function Header() {
                 <Btn path="showcase" />
                 <Btn path="projects" />
                 <Btn path="achievements" />
-                <Btn path="experience" />
+                <Btn path="education" />
                 <Btn path="about" />
+                {/*<Btn path="experience" />*/}
             </nav>
         </div>
     );

@@ -9,9 +9,9 @@ export default class ResponsiveHandler {
     }
 
     static size = {
-        FULLSCREEN: 880,
+        FULLSCREEN: 1000,
         HALFSCREEN: 650,
-        MINISCREEN: 500
+        MINISCREEN: 550 
     }
 
     static getLayout = () => {
