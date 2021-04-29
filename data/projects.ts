@@ -81,6 +81,7 @@ interface projectType {
     shortDescription: string,
     description: string,
     hasLogo: boolean,
+    logoURL? : string,
     repos?: Array<repoType>,
     links?: Array<linkType>,
     addtionalSections?: Array<sectionType>,
@@ -92,6 +93,7 @@ export const projects: Array<projectType> = [
         shortDescription: "ARGB Controller with React Native and ESP32",
         description: "",
         hasLogo: true,
+        logoURL: "",
         repos: [
             {
                 name: "Pyxelite",
@@ -116,6 +118,7 @@ export const projects: Array<projectType> = [
         shortDescription: "Personal Finance Management Mobile Application",
         description: "",
         hasLogo: true,
+        logoURL: "",
         links: [
             {
                 label: "Offical Website",
